@@ -10,5 +10,5 @@ COPY . .
 
 EXPOSE 7860
 
-CMD["nodejs-proxy"]
+CMD ["nodejs-proxy"]
 USER 10001
