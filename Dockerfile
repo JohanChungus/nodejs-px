@@ -1,10 +1,14 @@
 FROM node:latest
+
 WORKDIR /home/choreouser
 COPY / /home/choreouser/
 
-USER 10069
 RUN apt update && apt upgrade -y
-RUN npm i ws express basic-auth
 RUN npm i -g @3kmfi6hp/nodejs-proxy
+RUN npm i ws express basic-auth
 COPY . .
-CMD ["nodejs-proxy"]
+
+EXPOSE 7860
+
+CMD["nodejs-proxy"]
+USER 10001
