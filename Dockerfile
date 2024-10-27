@@ -1,6 +1,5 @@
 FROM node:latest
-WORKDIR /app
-COPY . .
 USER 10069
-RUN npm install
-CMD ["npx", "nodejs-proxy"]
+
+RUN npm i -g @3kmfi6hp/nodejs-proxy
+CMD ["nodejs-proxy"]
